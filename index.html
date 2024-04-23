@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link data-optimized="1" rel="stylesheet" href="css/5921624bf5bbe4c8c091ef09226fa76f.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link data-optimized="1" href="css/1c7a3d2ee9759dc256d915300855c494.css" rel="stylesheet">
+        <link data-optimized="1" href="css/ba9cbbe9240a489628be8eb27c56db8a.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animated.css">
+        <link rel="shortcut icon" href="images/faveicon.png">
+        <title>:: Cupom da Vez ::</title>
+    </head>
+
+    <body class="fundo1" onload="setTimeout('redirectTime()', 3000)">
+
+
+
+        <div style="width: 60%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" id="p1">
+       
+            <img style="position: absolute; left: 0;" src="images/logo.png">
+
+            <div style="display: flex; margin-top: 60px; justify-content: space-evenly;">
+                <h1 class="loading" style="width: 20px; height: 20px;"></h1>
+                <h1 class="carregandoCodigo">CARREGANDO...</h1>
+            </div>
+
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/funcoes.js"></script>
+        <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://google.com.br"></script>
+        <script>
+            // REDIRECIONAMENTO LOADING
+            function redirectTime(){
+                window.location = "cupom1/inicio"
+            }
+            // REDIRECIONAMENTO LOADING
+
+            
+
+
+
+
+
+
+
+            // Função para extrair os parâmetros UTM da URL
+            function getUTMParameters() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmParameters = ['utm_source', 'utm_campaign', 'utm_term', 'utm_content', 'utm_medium'];
+                let utmData = {};
+
+                utmParameters.forEach(param => {
+                    if (urlParams.has(param)) {
+                        utmData[param] = urlParams.get(param);
+                    }
+                });
+
+                return utmData;
+            }
+
+            // Função para salvar os dados UTM no Local Storage
+            function saveUTMDataToLocalStorage(utmData) {
+                for (const [key, value] of Object.entries(utmData)) {
+                    localStorage.setItem(key, value);
+                }
+            }
+
+            // Extrair e salvar os dados UTM
+            const utmData = getUTMParameters();
+            if (Object.keys(utmData).length > 0) {
+                saveUTMDataToLocalStorage(utmData);
+                console.log('Dados UTM salvos no Local Storage:', utmData);
+            } else {
+                console.log('Nenhum parâmetro UTM encontrado na URL.');
+            }
+
+        </script>
+
+    
+</body></html>
