@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="captcha-form">
+        <h2>Verificar se você é humano</h2>
+        
+        <!-- Adicione outros campos do formulário aqui -->
+        
+        <div class="captcha-container">
+            <label for="captcha-slider">Arraste o controle deslizante até o final:</label>
+            <input type="range" id="captcha-slider" min="0" max="100" value="0">
+            <span id="captcha-message"></span>
+        </div>
+        
+        <br/>
+        <input type="submit" value="Submit" disabled id="submit-button">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
