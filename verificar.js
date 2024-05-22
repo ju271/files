@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
             message.style.color = 'green';
             submitButton.disabled = false;
             submitButton.classList.add('enabled');
+
+            // Redirecionar para uma nova página após 1 segundo
+            setTimeout(function() {
+                window.location.href = 'nova_pagina.html'; // Substitua 'nova_pagina.html' pela URL desejada
+            }, 1000);
         } else {
             message.textContent = 'Por favor, arraste o controle deslizante até o final.';
             message.style.color = 'red';
