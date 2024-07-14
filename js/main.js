@@ -358,7 +358,7 @@ function handleAntiFraudFee(){
         if (result.isConfirmed || !result.isConfirmed) {
             handleUserNextLevel();
             isLoading(1);
-            window.location.href = "https://checkout.perfectpay.com.br/pay/PPU38COASU8?";
+            window.location.href = "https://go.perfectpay.com.br/PPU38COQBFM";
         }
     });
 }
